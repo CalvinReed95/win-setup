@@ -48,7 +48,7 @@ window_effects:
     # Highlight the window with a colored border.
     border:
       enabled: true
-      color: "#b5bd68"
+      color: "#009cc9"
 
     # Change the corner style of the window"s frame.
     # ** Exclusive to Windows 11 due to API limitations.
@@ -99,13 +99,9 @@ workspaces:
     display_name: "7. Terminal"
     
 window_rules:
-  - commands: ["move --workspace 1"]
-    match:
-      #- window_process: { regex: "Slack" }
-
   - commands: ["move --workspace 2"]
     match:
-      - window_process: { regex: "Slack|Discord|WhatsApp" }
+      - window_process: { regex: "slack|Discord|WhatsApp" }
 
   - commands: ["move --workspace 3"]
     match:
@@ -117,7 +113,7 @@ window_rules:
 
   - commands: ["move --workspace 5"]
     match:
-      - window_process: { regex: "" }
+      - window_process: { regex: "Code|devenv" }
 
   - commands: ["move --workspace 6"]
     match:
@@ -125,7 +121,7 @@ window_rules:
 
   - commands: ["move --workspace 7"]
     match:
-      - window_process: { regex: "powershell" }
+      - window_process: { regex: "powershell|wezterm-gui" }
 
   - commands: ["ignore"]
     match:
